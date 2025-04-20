@@ -48,7 +48,7 @@ public class Parser {
     }
 
     private boolean check(TokenType type) {
-        if (isAtEnd()) return true;
+        if (isAtEnd()) return false;
         return peek().type == type;
     }
 
@@ -138,7 +138,7 @@ public class Parser {
 
     private void synchronize() {
         advance();
-        while(!isAtEnd()) {
+        while (!isAtEnd()) {
             if (previous().type == SEMICOLON) return;
 
             switch (peek().type) {
@@ -152,7 +152,7 @@ public class Parser {
                 case RETURN:
                     return;
             }
+            advance();
         }
-        advance();
     }
 }
