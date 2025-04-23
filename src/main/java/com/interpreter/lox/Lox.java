@@ -57,9 +57,9 @@ public class Lox {
 
 //        System.out.println(new AstPrinter().print(statements));
 
-        for (Token token: tokens) {
-            System.out.println(token);
-        }
+//        for (Token token: tokens) {
+//            System.out.println(token);
+//        }
     }
 
     static void error(int line, String message) {
