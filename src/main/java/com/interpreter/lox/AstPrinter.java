@@ -87,6 +87,12 @@ public class AstPrinter implements Expr.Visitor<String>, Stmt.Visitor<Void> {
         return null;
     }
 
+    @Override
+    public Void visitWhileStmt(Stmt.While stmt) {
+        //TODO
+        return null;
+    }
+
     public static void main(String[] args) {
         Expr expression = new Expr.Binary(
                 new Expr.Unary(

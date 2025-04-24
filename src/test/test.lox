@@ -1,3 +1,4 @@
+print "SCOPING TEST";
 var a = "global a";
 var b = "global b";
 var c = "global c";
@@ -18,11 +19,21 @@ print a;
 print b;
 print c;
 
+print "ASSIGNMENT TEST";
 var a = 1;
 {
   var a = a + 2;
   print a;
 }
 
+print "LOGICAL OPERATOR TEST";
+
 print "hi" or 2;
 print nil or "yes";
+
+print "WHILE TEST";
+var  i = 0;
+while (i < 3) {
+    print i;
+    i = i + 1;
+}
