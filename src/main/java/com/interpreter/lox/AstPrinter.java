@@ -17,6 +17,12 @@ public class AstPrinter implements Expr.Visitor<String>, Stmt.Visitor<Void> {
     }
 
     @Override
+    public String visitCallExpr(Expr.Call expr) {
+        //TODO
+        return "";
+    }
+
+    @Override
     public String visitGroupingExpr(Expr.Grouping expr) {
         return parenthesize("group", expr.expression);
     }
@@ -70,6 +76,12 @@ public class AstPrinter implements Expr.Visitor<String>, Stmt.Visitor<Void> {
     }
 
     @Override
+    public Void visitFunctionStmt(Stmt.Function stmt) {
+        //TODO
+        return null;
+    }
+
+    @Override
     public Void visitIfStmt(Stmt.If stmt) {
         //TODO
         return null;
@@ -77,6 +89,12 @@ public class AstPrinter implements Expr.Visitor<String>, Stmt.Visitor<Void> {
 
     @Override
     public Void visitPrintStmt(Stmt.Print stmt) {
+        //TODO
+        return null;
+    }
+
+    @Override
+    public Void visitReturnStmt(Stmt.Return stmt) {
         //TODO
         return null;
     }
