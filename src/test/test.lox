@@ -23,3 +23,6 @@ var a = 1;
   var a = a + 2;
   print a;
 }
+
+print "hi" or 2;
+print nil or "yes";
