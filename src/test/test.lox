@@ -55,7 +55,7 @@ fun sayHi(first, last) {
 
 sayHi("Russell", "Mathias");
 
-print "FUNCTION TEST 2";
+print "RETURN TEST";
 var start = clock();
 fun fib(n) {
   if (n <= 1) return n;
@@ -68,3 +68,19 @@ for (var i = 0; i < 20; i = i + 1) {
 var end = clock();
 print "Time it took: ";
 print end - start;
+
+print "CLOSURE TEST";
+fun makeCounter() {
+  var i = 0;
+  fun count() {
+    i = i + 1;
+    print i;
+  }
+
+  return count;
+}
+
+var counter = makeCounter();
+counter();
+counter();
+counter();
